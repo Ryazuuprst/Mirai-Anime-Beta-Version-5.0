@@ -89,8 +89,8 @@ header {
 }
 
 .logo img {
-    height: 100%;     
-    width: 172px;      
+    height: auto;     
+    width: 44px;      
     object-fit: contain; 
     display: block;
 }
