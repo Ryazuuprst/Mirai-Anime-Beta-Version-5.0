@@ -27,11 +27,12 @@ header {
     padding: 12px 18px;
     z-index: 999999;
 }
+/* Search Container */
 .nav-search-item {
     position: relative;
-    flex-grow: 0;
+    flex-grow: 1;              /* allow it to expand */
     width: 100%;
-    max-width: 420px;
+    max-width: 425px;          /* desktop cap */
     margin: 0 auto;
     padding: 0 10px;
 }
@@ -43,6 +44,7 @@ header {
     align-items: center;
 }
 
+/* Search Box */
 #animeSearchBox {
     width: 100%;
     padding: 8px 12px 8px 34px;
@@ -55,6 +57,7 @@ header {
     transition: all 0.2s ease;
 }
 
+/* Search Icon */
 .search-icon {
     position: absolute;
     left: 20px;
@@ -64,6 +67,18 @@ header {
     font-size: 12px;
 }
 
+/* Responsive Fix */
+@media(max-width: 610px) {
+    .nav-search-item {
+        max-width: none;       /* remove cap */
+        padding: 0 8px;
+    }
+    #animeSearchBox {
+        width: 100%;           /* full width on mobile */
+        max-width: none;
+        font-size: 14px;       /* slightly bigger text */
+    }
+}
 .logo {
     height: 40px;
     display: flex;
